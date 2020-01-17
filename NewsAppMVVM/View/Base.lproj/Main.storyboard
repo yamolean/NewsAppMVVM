@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xWF-vv-Ja3">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--GoodNews-->
+        <scene sceneID="Uzf-1s-LPb">
+            <objects>
+                <tableViewController id="T4w-e9-hUc" customClass="NewsListTableViewController" customModule="NewsAppMVVM" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="TpK-Lo-P59">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="NewsListTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsListTableViewCell" rowHeight="150" id="Jyu-XH-crn" customClass="NewsListTableViewCell" customModule="NewsAppMVVM" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="150"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Jyu-XH-crn" id="dAH-Sr-mmG">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NG2-XV-fhn">
+                                            <rect key="frame" x="20" y="8" width="374" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="6R9-xS-BMO"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Can-Mx-CQS">
+                                            <rect key="frame" x="20" y="56" width="374" height="86"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Can-Mx-CQS" firstAttribute="top" secondItem="NG2-XV-fhn" secondAttribute="bottom" constant="8" id="9ic-Jy-2yG"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="NG2-XV-fhn" secondAttribute="trailing" id="Afr-tr-VNH"/>
+                                        <constraint firstAttribute="bottom" secondItem="Can-Mx-CQS" secondAttribute="bottom" constant="8" id="S9I-XO-CwC"/>
+                                        <constraint firstItem="NG2-XV-fhn" firstAttribute="top" secondItem="dAH-Sr-mmG" secondAttribute="top" constant="8" id="Tr3-Zm-WTP"/>
+                                        <constraint firstAttribute="trailing" secondItem="Can-Mx-CQS" secondAttribute="trailing" constant="20" symbolic="YES" id="eyz-JG-XSV"/>
+                                        <constraint firstItem="NG2-XV-fhn" firstAttribute="leading" secondItem="dAH-Sr-mmG" secondAttribute="leadingMargin" id="i6s-tS-ygi"/>
+                                        <constraint firstItem="Can-Mx-CQS" firstAttribute="leading" secondItem="dAH-Sr-mmG" secondAttribute="leading" constant="20" symbolic="YES" id="qXp-wJ-xu4"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="Can-Mx-CQS" id="bOW-JW-r43"/>
+                                    <outlet property="titleLabel" destination="NG2-XV-fhn" id="C5X-eO-yuv"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="T4w-e9-hUc" id="Qeg-5G-ca9"/>
+                            <outlet property="delegate" destination="T4w-e9-hUc" id="XQb-KE-iIr"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="GoodNews" id="T9h-WU-zGI"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mFv-Au-KyY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2079.7101449275365" y="123.88392857142857"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BEc-Yp-CIc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xWF-vv-Ja3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="W7C-Do-TLD">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="T4w-e9-hUc" kind="relationship" relationship="rootViewController" id="lBT-f9-2D6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p14-yO-hIp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1171.0144927536232" y="123.88392857142857"/>
+        </scene>
+    </scenes>
+</document>
